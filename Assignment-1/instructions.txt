@@ -1,0 +1,17 @@
+####################################
+#### Mukul Mehta                ####
+#### 18CS10033                  ####
+#### Social Computing (CS60017) ####
+#### Assignment - 1             ####
+####################################
+
+Python Settings
+- The interpreter I used was Python3.7.5 along with SNAP 5.0. The code should run in any version of Python >= 3.6
+- I've frozen dependencies inside the requirements.txt file and if you're working in a virtualenv, pip install -r requirements.txt will install correct versions of dependencies
+
+Instructions
+- The code to generate the subgraphs lives in generate_subgraphs.py. It looks for the corresponding .txt datasets in the SNAP-Data folder by default
+- All configuration lives inside config.py (Random seed, default paths to SNAP data, Subgraphs and Plots)
+- To generate output for any of the elist files, place it inside the subgraphs path and run the code as python gen_structure.py <{facebook, amazon}.elist>
+- The code generates all of the results first and only then prints them, so it'll take time to run it before there is output. Once the results are computed, all of them will get printed to STDOUT at once
+- The output plots will be moved to the plots folder (Defined in Config). Corresponding to each plot, there is a .png and 2 snap specific files of extension .plt and .tab

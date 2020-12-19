@@ -1,0 +1,1 @@
+snap-stanford==5.0.0
