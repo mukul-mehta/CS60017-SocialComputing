@@ -1,0 +1,33 @@
+####################################
+#### Mukul Mehta                ####
+#### 18CS10033                  ####
+#### Social Computing (CS60017) ####
+#### Assignment - 3             ####
+####################################
+
+
+Task - 1
+------------
+
+1. I've used Python 3.7 but any version of Python >= 3.6 should work
+2. For both Task 1 and Task 2, I've frozen dependencies in the file `requirements.txt`. If you're in a virtualenv, run pip install -r requirements.txt to install all dependencies inside of the virtual environment
+3. The paths and model configurations are given in the file `task1/config.ini`. To use different paths or to update a certain model parameter, edit the value inside the file
+4. The predictions are stored in the folder `predictions`. Each line is the Tweet ID followed by label (0 or 1, 1 being hateful)
+5. The folder processed-data contains the preprocessed tweets. Each tweet from the original train and test set is processed by removing punctuation and lowercasing it.
+
+
+Task - 2
+------------
+
+For the purpose of classification, I've used RoBERTa, a transformer based model based on the popular BERT model
+I used the transformers library (https://huggingface.co/), which provided the RobertaTokenizer and RobertaForSequenceClassification models
+
+My code was heavily inspired by Chris McCormick's great blog on fine tuning BERT for classification tasks. I used RoBERTa instead of BERT but most things remain the same
+All training was done on Google Colab
+
+To run:
+1. The saved model files needs to be present in the folder `task2/save-model`. The files are compressed and uploaded to AWS S3 and can be downloaded via cURL/wget: https://metamehta-public.s3.ap-south-1.amazonaws.com/save-model.tar.gz
+2. When the files (model.bin, vocab.json and others) are present in `task2/save-model`, run inference on the test dataset by running `python main.py`
+3. Results will be generated and stored with other predictions from Task-1. On machines with no GPUs (Like on my laptop), inference can take long time (Over 20 mins in my case)
+
+The training was done in the attached IPython notebook. Code is very similar to that from Chris McCormick's blog (https://mccormickml.com/2019/07/22/BERT-fine-tuning/)
