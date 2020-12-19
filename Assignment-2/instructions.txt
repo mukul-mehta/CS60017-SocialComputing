@@ -1,0 +1,22 @@
+####################################
+#### Mukul Mehta                ####
+#### 18CS10033                  ####
+#### Social Computing (CS60017) ####
+#### Assignment - 2             ####
+####################################
+
+Python Settings
+- The interpreter I used was Python3.8.6 along with SNAP 5.0. The code should run in any version of Python >= 3.6
+- I've frozen dependencies inside the requirements.txt file and if you're working in a virtualenv, pip install -r requirements.txt will install correct versions of dependencies
+
+Instructions
+- The original dataset downloaded from SNAP's website is inside SNAP-DATA with the name `facebook.elist`
+- To analyze centrality values, run `python analyze_centrality.py`
+- To modify any of the parameters or locations of files, change the corresponding value in the file `config.py`
+
+Benchmark
+I ran the code on my machine (i5-1038NG7(4) @ 2.0 GHz on OSX) and obtained the following values averaged over 3 runs
+
+Closeness Centrality -> 24 seconds
+Betweenness Centrality -> 153 seconds
+PageRank Centrality -> 1.25 seconds
